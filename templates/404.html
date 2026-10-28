@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <title>Page Not Found | Sohaib Khan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ self.title() if self.title is defined else 'Sohaib Khan | AI & Machine Learning' }}">
+    <meta property="og:description" content="Sohaib Khan's AI, Machine Learning and software portfolio.">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ og_image_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ og_image_url }}">
+</head>
+<body>
+    <main style="min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem;">
+        <section>
+            <p style="font-size: 1.25rem;">Error 404</p>
+            <h1>Page not found</h1>
+            <p>The page you requested does not exist or may have been moved.</p>
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Back to home</a>
+        </section>
+    </main>
+</body>
+</html>
